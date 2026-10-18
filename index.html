@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario Puerto Escondido 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            teal: '#0d9488',
+                            dark: '#0f172a',
+                            ocean: '#0284c7',
+                            coral: '#f97316',
+                            sand: '#f8f5f0',
+                            card: '#ffffff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #0d9488 50%, #0284c7 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 9999px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #0d9488;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased selection:bg-teal-500 selection:text-white min-h-screen">
+
+    <!-- HEADER / HERO SECTION -->
+    <header class="hero-gradient text-white relative shadow-xl overflow-hidden pb-12 pt-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <!-- Top Nav Bar -->
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-2xl bg-coral-500 flex items-center justify-center text-white shadow-lg text-xl font-black">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-serif font-extrabold text-xl tracking-tight text-white">Puerto Escondido '26</h1>
+                        <p class="text-xs text-teal-100 opacity-90">Viaje Grupal de Playa</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <nav class="flex flex-wrap items-center gap-2 text-xs font-semibold">
+                    <a href="#presupuesto-section" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-xl border border-white/20 transition"><i class="fa-solid fa-calculator mr-1"></i>Presupuesto</a>
+                    <a href="#airbnb-reglas" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-xl border border-white/20 transition"><i class="fa-solid fa-house mr-1"></i>Hospedaje & Clima</a>
+                    <a href="#checklist-section" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-xl border border-white/20 transition"><i class="fa-solid fa-list-check mr-1"></i>Checklist</a>
+                    <a href="#itinerario-section" class="bg-coral-500 hover:bg-coral-600 text-white px-3.5 py-1.5 rounded-xl shadow transition"><i class="fa-solid fa-calendar-days mr-1"></i>Itinerario</a>
+                </nav>
+            </div>
+
+            <!-- Hero Main Info -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 space-y-4">
+                    <span class="inline-flex items-center gap-1.5 bg-white/15 text-teal-100 border border-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-location-dot text-coral-500"></i> Oaxaca, México
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+                        Itinerario & Guía del Viaje
+                    </h2>
+                    <p class="text-teal-100 text-sm sm:text-base leading-relaxed opacity-95">
+                        Plan completo de actividades con horarios exactos, cotizaciones y calculadora interactiva, mapa de ubicaciones, reglas del hospedaje y checklist de viaje.
+                    </p>
+
+                    <!-- Links destacados -->
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <a href="https://open.spotify.com/playlist/5Z9Ik3d6gW4UUBJlqm1a59?si=j_y9sLADRAGCGot_k8_8iw&utm_source=copy-link" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm shadow-md transition flex items-center gap-2">
+                            <i class="fa-brands fa-spotify text-lg"></i> Playlist Spotify
+                        </a>
+                        <a href="https://photos.app.goo.gl/Pgh6APs5Yu6eFdqMA" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm shadow-md transition flex items-center gap-2">
+                            <i class="fa-solid fa-images text-lg"></i> Álbum Fotográfico
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Ubicación Airbnb -->
+                <div class="md:col-span-5 bg-white text-slate-800 p-6 rounded-3xl shadow-2xl border border-slate-100 space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <span class="text-xs font-bold uppercase text-teal-700 tracking-wider"><i class="fa-solid fa-house-user mr-1"></i> Hospedaje Airbnb</span>
+                        <span class="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg font-bold">Anfitriona: Carelia</span>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-500 font-semibold uppercase">Dirección Registrada</p>
+                        <p class="font-bold text-slate-900 text-sm mt-0.5">Tamaulipas Brisas de Zicatela, Oaxaca 70934</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/WNmfkHvBJToVHSMZ6" target="_blank" class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2.5 px-4 rounded-xl font-bold text-xs sm:text-sm shadow transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-map-location-dot"></i> Abrir en Google Maps
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-12">
+
+        <!-- SECTION 1: PRESUPUESTO & COTIZACIONES -->
+        <section id="presupuesto-section" class="scroll-mt-6 space-y-6">
+            <div class="text-center max-w-xl mx-auto space-y-1">
+                <span class="text-xs uppercase font-bold text-teal-600 tracking-widest">Finanzas del Viaje</span>
+                <h3 class="font-serif text-3xl font-bold text-slate-900">Presupuesto & Cotizaciones</h3>
+                <p class="text-xs text-slate-500">Desglose estimado de gastos por actividad, traslados y simulador interactivo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Tabla Desglosada de Cotizaciones por Persona -->
+                <div class="lg:col-span-7 bg-white p-6 rounded-3xl shadow-sm border border-slate-200 space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                        <h4 class="font-serif font-bold text-lg text-slate-900"><i class="fa-solid fa-receipt text-teal-600 mr-2"></i>Cotización de Actividades & Servicios</h4>
+                        <span class="text-xs bg-teal-50 text-teal-700 font-bold px-2.5 py-1 rounded-lg">Por Persona</span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead>
+                                <tr class="text-slate-400 border-b border-slate-100 text-[11px] uppercase tracking-wider">
+                                    <th class="pb-2">Concepto / Actividad</th>
+                                    <th class="pb-2 text-center">Día</th>
+                                    <th class="pb-2 text-right">Costo Estimado</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Tour de Delfines</div>
+                                        <div class="text-[11px] text-slate-500">Salida desde Puerto Angelito (Pago restante)</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Jueves</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$600 MXN</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Tour de Bioluminiscencia</div>
+                                        <div class="text-[11px] text-slate-500">Comunidad de Zapotalito</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Jueves</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$800 MXN</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Clases de Surf</div>
+                                        <div class="text-[11px] text-slate-500">Carrizalillo o Zicatela (Instructor + Tabla)</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Viernes</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$500 MXN</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Day Pass Playa Coral</div>
+                                        <div class="text-[11px] text-slate-500">Acceso e instalaciones</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Sábado</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$150 MXN</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Liberación de Tortugas (Vive Mar)</div>
+                                        <div class="text-[11px] text-slate-500">Donación voluntaria / Experiencia Bacocho</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Sábado</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$150 MXN</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Motos Acuáticas</div>
+                                        <div class="text-[11px] text-slate-500">Bahía Principal (Aprox por persona compartida)</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Domingo</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$400 MXN</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Traslados Aeropuerto - Airbnb - Aeropuerto</div>
+                                        <div class="text-[11px] text-slate-500">$200 ida + $200 regreso</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Mié / Lun</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$400 MXN</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium text-slate-800">
+                                        <div class="font-bold">Fondo Grupal de Comidas / Despensa Chedraui</div>
+                                        <div class="text-[11px] text-slate-500">Estimado por día para consumo y compras grupales</div>
+                                    </td>
+                                    <td class="py-2.5 text-center text-slate-500">Todos</td>
+                                    <td class="py-2.5 text-right font-bold text-slate-900">$2,000 MXN</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Calculadora Interactiva -->
+                <div class="lg:col-span-5 bg-slate-900 text-white p-6 rounded-3xl shadow-lg border border-slate-800 flex flex-col justify-between space-y-6">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                            <h4 class="font-serif font-bold text-lg text-white"><i class="fa-solid fa-calculator text-coral-500 mr-2"></i>Calculadora de Gastos</h4>
+                            <span class="text-[11px] bg-coral-500/20 text-coral-300 font-bold px-2 py-1 rounded-lg">Personaliza tu Plan</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Selecciona las actividades en las que participarás para calcular tu gasto total estimado:</p>
+
+                        <div class="space-y-2.5 mt-4 text-xs" id="calc-checkboxes">
+                            <label class="flex items-center justify-between p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 cursor-pointer hover:border-slate-500 transition">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" data-amount="600" checked onchange="calculateBudget()" class="calc-item accent-teal-500 rounded">
+                                    <span>Tour Delfines</span>
+                                </span>
+                                <span class="font-bold text-teal-400">$600</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 cursor-pointer hover:border-slate-500 transition">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" data-amount="800" checked onchange="calculateBudget()" class="calc-item accent-teal-500 rounded">
+                                    <span>Bioluminiscencia (Zapotalito)</span>
+                                </span>
+                                <span class="font-bold text-teal-400">$800</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 cursor-pointer hover:border-slate-500 transition">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" data-amount="500" checked onchange="calculateBudget()" class="calc-item accent-teal-500 rounded">
+                                    <span>Clases de Surf</span>
+                                </span>
+                                <span class="font-bold text-teal-400">$500</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 cursor-pointer hover:border-slate-500 transition">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" data-amount="150" checked onchange="calculateBudget()" class="calc-item accent-teal-500 rounded">
+                                    <span>Day Pass Playa Coral</span>
+                                </span>
+                                <span class="font-bold text-teal-400">$150</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 cursor-pointer hover:border-slate-500 transition">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" data-amount="400" checked onchange="calculateBudget()" class="calc-item accent-teal-500 rounded">
+                                    <span>Motos Acuáticas</span>
+                                </span>
+                                <span class="font-bold text-teal-400">$400</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 cursor-pointer hover:border-slate-500 transition">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" data-amount="400" checked onchange="calculateBudget()" class="calc-item accent-teal-500 rounded">
+                                    <span>Traslados Aeropuerto (Ida y Vuelta)</span>
+                                </span>
+                                <span class="font-bold text-teal-400">$400</span>
+                            </label>
+
+                            <label class="flex items-center justify-between p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 cursor-pointer hover:border-slate-500 transition">
+                                <span class="flex items-center gap-2">
+                                    <input type="checkbox" data-amount="2000" checked onchange="calculateBudget()" class="calc-item accent-teal-500 rounded">
+                                    <span>Comidas / Bebidas / Despensa</span>
+                                </span>
+                                <span class="font-bold text-teal-400">$2,000</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700/80 flex items-center justify-between">
+                        <div>
+                            <span class="text-[11px] text-slate-400 uppercase font-bold block">Total Estimado Actividades</span>
+                            <span class="text-xs text-slate-300">Por persona sin incluir vuelos</span>
+                        </div>
+                        <span id="total-budget-display" class="font-serif text-2xl font-extrabold text-coral-400">$5,000 MXN</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: REGLAS, CLIMA & TRANSPORTE -->
+        <section id="airbnb-reglas" class="grid grid-cols-1 md:grid-cols-3 gap-6 scroll-mt-6">
+            
+            <!-- REGLAS DEL DEPARTAMENTO -->
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+                <div class="flex items-center gap-2.5 text-coral-500 mb-3">
+                    <i class="fa-solid fa-shield-halved text-xl"></i>
+                    <h3 class="font-serif font-bold text-lg text-slate-900">Reglas del Departamento</h3>
+                </div>
+                <p class="text-xs text-slate-500 mb-4">Normas para garantizar una excelente estancia:</p>
+                
+                <ul class="space-y-2.5 text-xs">
+                    <li class="flex items-start gap-2.5 p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+                        <i class="fa-solid fa-volume-xmark text-slate-600 mt-0.5"></i>
+                        <div>
+                            <span class="font-bold text-slate-900">Silencio:</span> 11:00 PM a 07:00 AM.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2.5 p-2.5 bg-red-50 text-red-900 rounded-xl border border-red-100">
+                        <i class="fa-solid fa-ban-smoking text-red-600 mt-0.5"></i>
+                        <div>
+                            <span class="font-bold text-red-950">Sin Fumar:</span> Prohibido en habitaciones.
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2.5 p-2.5 bg-amber-50 text-amber-900 rounded-xl border border-amber-100">
+                        <i class="fa-solid fa-key text-amber-600 mt-0.5"></i>
+                        <div>
+                            <span class="font-bold text-amber-950">Llaves:</span> Cobro de <strong>$1,000 MXN</strong> si se extravía.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CLIMA Y PRONÓSTICO -->
+            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-2 text-teal-600">
+                        <i class="fa-solid fa-cloud-sun text-xl"></i>
+                        <h3 class="font-serif font-bold text-lg text-slate-900">Clima & Pronóstico</h3>
+                    </div>
+                    <a href="https://www.meteored.mx/clima_Puerto+Escondido-America+Norte-Mexico-Oaxaca--1-71627.html" target="_blank" class="text-[11px] bg-teal-50 text-teal-700 hover:bg-teal-100 font-bold px-2 py-1 rounded-lg transition border border-teal-200">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Meteored
+                    </a>
+                </div>
+                <p class="text-xs text-slate-500 mb-3">Condiciones estimadas en la costa de Oaxaca:</p>
+
+                <div class="grid grid-cols-2 gap-2 mb-3">
+                    <div class="bg-teal-50/60 p-2.5 rounded-xl border border-teal-100 text-center">
+                        <span class="text-[10px] font-bold uppercase text-teal-800 block">Temperatura</span>
+                        <span class="text-lg font-extrabold text-slate-900">28°C - 32°C</span>
+                    </div>
+                    <div class="bg-amber-50/60 p-2.5 rounded-xl border border-amber-100 text-center">
+                        <span class="text-[10px] font-bold uppercase text-amber-800 block">Ambiente</span>
+                        <span class="text-xs font-bold text-slate-900">Cálido / Nubes & Claros</span>
+                    </div>
+                </div>
+
+                <p class="text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-100 leading-relaxed">
+                    <i class="fa-solid fa-cloud-sun-rain text-teal-600 mr-1"></i> Posibilidad de lluvia débil o tormentas tropicales ocasionales. Llevar impermeable ligero.
+                </p>
+            </div>
+
+            <!-- LOGÍSTICA DE TRANSPORTE -->
+            <div class="bg-slate-900 text-white p-6 rounded-3xl shadow-sm border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-van-shuttle text-coral-500 text-xl"></i>
+                            <h3 class="font-serif font-bold text-lg text-white">Transporte</h3>
+                        </div>
+                        <span class="text-[10px] bg-coral-500/20 text-coral-300 font-bold px-2 py-0.5 rounded">Trackers 8p</span>
+                    </div>
+
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+                            <span><strong>Camioneta Trackers:</strong> Capacidad para 8 personas.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+                            <span><strong>Jueves:</strong> Definir si se admite auto, cuatrimoto o burro adicional.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+                            <span><strong>Aeropuerto:</strong> $200 por trayecto ($400 total).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-red-300 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-xmark text-red-400"></i>
+                    <span>Eliminada la revisión con Mex Rent a Car.</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECTION 3: CHECKLIST DE EQUIPAJE Y VIAJE -->
+        <section id="checklist-section" class="scroll-mt-6">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-100">
+                    <div>
+                        <span class="text-xs uppercase font-bold text-teal-600 tracking-wider">Equipaje Inteligente</span>
+                        <h3 class="font-serif font-bold text-2xl sm:text-3xl text-slate-900 mt-0.5">Checklist Completo de Viaje</h3>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                        <div class="text-right">
+                            <span class="text-xs text-slate-500 font-medium block">Progreso:</span>
+                            <span id="checklist-counter" class="font-extrabold text-sm text-teal-700">0 / 12</span>
+                        </div>
+                        <div class="w-28 bg-slate-200 h-2.5 rounded-full overflow-hidden">
+                            <div id="checklist-bar" class="bg-teal-600 h-full w-0 transition-all duration-300"></div>
+                        </div>
+                        <button onclick="resetChecklist()" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-2.5 py-1.5 rounded-lg transition" title="Reiniciar lista">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Categorías de Checklist -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Categoría 1: Documentos & Logística -->
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-3">
+                        <h4 class="font-bold text-xs uppercase text-coral-600 tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-id-card"></i> Documentos & Logística
+                        </h4>
+                        <div class="space-y-2">
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Check-in del vuelo de salida</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Identificación oficial (INE / Pasaporte)</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Boleto de vuelo (digital o físico)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2: Ropa & Playa -->
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-3">
+                        <h4 class="font-bold text-xs uppercase text-teal-600 tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-shirt"></i> Ropa & Playa
+                        </h4>
+                        <div class="space-y-2">
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Trajes de baño y ropa ligera</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Playera grupal (uniforme oficial)</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Sombrero/gorra, lentes y sandalias</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3: Equipo & Tecnología -->
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-3">
+                        <h4 class="font-bold text-xs uppercase text-ocean tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-plug"></i> Equipo & Tecnología
+                        </h4>
+                        <div class="space-y-2">
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Cargadores y Power Bank</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Funda / Bolsa impermeable celular</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Equipo de natación / Snorkel</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 4: Salud & Cuidado Personal -->
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-3">
+                        <h4 class="font-bold text-xs uppercase text-emerald-600 tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-kit-medical"></i> Salud & Personal
+                        </h4>
+                        <div class="space-y-2">
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Repelente de mosquitos biodegradable</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Bloqueador solar orgánico</span>
+                            </label>
+                            <label class="flex items-start gap-2.5 text-xs text-slate-800 cursor-pointer">
+                                <input type="checkbox" onchange="updateChecklist()" class="checklist-item mt-0.5 w-4 h-4 rounded text-teal-600 accent-teal-600">
+                                <span>Botiquín básico y medicamentos</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: ITINERARIO DÍA A DÍA CON HORARIOS Y MAPAS -->
+        <section id="itinerario-section" class="scroll-mt-6 space-y-6">
+            <div class="text-center max-w-xl mx-auto space-y-1">
+                <span class="text-xs uppercase font-bold text-teal-600 tracking-widest">Cronograma Oficial</span>
+                <h3 class="font-serif text-3xl font-bold text-slate-900">Itinerario Día a Día</h3>
+                <p class="text-xs text-slate-500">Selecciona el día para consultar actividades, horarios exactos y ligas directas de Google Maps.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex overflow-x-auto gap-2 pb-2 custom-scrollbar justify-start md:justify-center">
+                <button onclick="setDay('miercoles')" id="btn-miercoles" class="day-btn px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-slate-200 text-slate-700">
+                    Miércoles
+                </button>
+                <button onclick="setDay('jueves')" id="btn-jueves" class="day-btn px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-teal-600 text-white shadow">
+                    Jueves
+                </button>
+                <button onclick="setDay('viernes')" id="btn-viernes" class="day-btn px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-slate-200 text-slate-700">
+                    Viernes
+                </button>
+                <button onclick="setDay('sabado')" id="btn-sabado" class="day-btn px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-slate-200 text-slate-700">
+                    Sábado
+                </button>
+                <button onclick="setDay('domingo')" id="btn-domingo" class="day-btn px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-slate-200 text-slate-700">
+                    Domingo
+                </button>
+                <button onclick="setDay('lunes')" id="btn-lunes" class="day-btn px-4 py-2.5 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-slate-200 text-slate-700">
+                    Lunes
+                </button>
+            </div>
+
+            <!-- Day Cards Container -->
+            <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 min-h-[420px]">
+
+                <!-- MIÉRCOLES -->
+                <div id="day-miercoles" class="day-panel hidden space-y-4">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+                        <h4 class="font-serif font-bold text-xl text-slate-900">Miércoles: Arribo & Bienvenida</h4>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-lg">Llegada</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>Tarde / Noche</span>
+                                <a href="https://maps.google.com/?q=Aeropuerto+Internacional+de+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Aeropuerto (PXM)
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-plane-arrival text-teal-600 mr-2"></i>Llegada a Puerto Escondido & Check-in</span>
+                            <p class="text-xs text-slate-600">Traslado desde el aeropuerto PXM hacia el Airbnb en Brisas de Zicatela ($200 por trayecto / $400 totales). Recepción con Carelia.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-coral-100 text-coral-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>08:30 PM - 10:30 PM</span>
+                                <a href="https://maps.google.com/?q=La+Punta+Zicatela+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> La Punta Zicatela
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-utensils text-coral-500 mr-2"></i>Cena de Bienvenida en La Punta</span>
+                            <p class="text-xs text-slate-600">Cena relajada con el grupo para repasar la logística del día siguiente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JUEVES -->
+                <div id="day-jueves" class="day-panel space-y-4">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+                        <h4 class="font-serif font-bold text-xl text-slate-900">Jueves: Delfines, Despensa, Manzanillo & Bioluminiscencia</h4>
+                        <span class="text-xs bg-teal-100 text-teal-800 font-bold px-2.5 py-1 rounded-lg">Día Completo</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <!-- Delfines -->
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>06:30 AM - 11:00 AM</span>
+                                <a href="https://maps.google.com/?q=Puerto+Angelito+Puerto+Escondido" target="_blank" class="text-xs bg-teal-50 text-teal-700 hover:bg-teal-100 font-bold px-2.5 py-1 rounded-lg border border-teal-200 transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Puerto Angelito
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-fish text-teal-600 mr-2"></i>Tour de Delfines</span>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Salida en lancha desde Puerto Angelito. Pasarán a recogernos al Airbnb y nos dejarán en otro punto.
+                            </p>
+                            <div class="p-2.5 bg-amber-50 text-amber-900 text-xs rounded-xl border border-amber-200 font-medium">
+                                <i class="fa-solid fa-cloud-sun-rain text-amber-600 mr-1"></i> <strong>Aviso Clima:</strong> Si el clima no permite el recorrido, se cancela y devuelven el dinero; si es favorable, se realiza y liquida el restante (<strong>$600 MXN por persona</strong>).
+                            </div>
+                        </div>
+
+                        <!-- Chedraui -->
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-slate-200 text-slate-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>11:30 AM - 01:00 PM</span>
+                                <a href="https://maps.google.com/?q=Chedraui+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Chedraui
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-cart-shopping text-coral-500 mr-2"></i>Compras de Despensa</span>
+                            <p class="text-xs text-slate-600">Surtido de bebidas, snacks y alimentos para la estancia en el departamento.</p>
+                        </div>
+
+                        <!-- Playa Manzanillo -->
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>01:30 PM - 05:00 PM</span>
+                                <a href="https://maps.google.com/?q=Playa+Manzanillo+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Playa Manzanillo
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-umbrella-beach text-teal-600 mr-2"></i>Comida & Tarde en Playa Manzanillo</span>
+                            <p class="text-xs text-slate-600">Comida de mariscos en palapas y tarde tranquila para nadar.</p>
+                        </div>
+
+                        <!-- Bioluminiscencia -->
+                        <div class="p-4 bg-indigo-50/80 rounded-2xl border border-indigo-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-indigo-200 text-indigo-900 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>05:00 PM - 10:00 PM</span>
+                                <a href="https://maps.google.com/?q=Zapotalito+Oaxaca" target="_blank" class="text-xs bg-indigo-600 text-white font-bold px-2.5 py-1 rounded-lg hover:bg-indigo-700 transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Zapotalito
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-indigo-950 block"><i class="fa-solid fa-wand-magic-sparkles text-indigo-600 mr-2"></i>Tour de Bioluminiscencia ($800/persona)</span>
+                            <p class="text-xs text-indigo-800">Recorrido en la laguna de la Comunidad de Zapotalito para presenciar la bioluminiscencia nocturna.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIERNES -->
+                <div id="day-viernes" class="day-panel hidden space-y-4">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+                        <h4 class="font-serif font-bold text-xl text-slate-900">Viernes: Surf, Carrizalillo & Antros</h4>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-lg">Surf & Noche</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-amber-100 text-amber-900 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>08:30 AM - 10:00 AM</span>
+                                <a href="https://maps.google.com/?q=El+Cafecito+Zicatela" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> El Cafecito
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-mug-hot text-amber-600 mr-2"></i>Desayuno en El Cafecito</span>
+                            <p class="text-xs text-slate-600">Desayuno completo frente al mar en Zicatela.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>10:30 AM - 01:00 PM</span>
+                                <a href="https://maps.google.com/?q=Playa+Carrizalillo+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Carrizalillo / Zicatela
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-water text-teal-600 mr-2"></i>Clases de Surf</span>
+                            <p class="text-xs text-slate-600">Sesión de surf con instructor en Playa Carrizalillo o Zicatela.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-slate-200 text-slate-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>02:00 PM - 05:00 PM</span>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-drumstick-bite text-coral-500 mr-2"></i>Comida Mar y Tierra en el Depa</span>
+                            <p class="text-xs text-slate-600">Comida grupal preparada en las instalaciones del Airbnb.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>05:00 PM - 07:00 PM</span>
+                                <a href="https://maps.google.com/?q=Playa+Carrizalillo+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Playa Carrizalillo
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-umbrella-beach text-teal-600 mr-2"></i>Tarde en Playa Carrizalillo</span>
+                            <p class="text-xs text-slate-600">Comer algo en la zona de la bahía y regresar a las 07:00 PM al departamento.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-purple-100 text-purple-900 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>09:00 PM en adelante</span>
+                                <a href="https://maps.google.com/?q=Zicatela+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Zicatela
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-martini-glass-citrus text-coral-500 mr-2"></i>Noche de Antros en Zicatela</span>
+                            <p class="text-xs text-slate-600">Salida de fiesta por la franja principal. Opción de cambiar de bar o antro si el ambiente no agrada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SÁBADO -->
+                <div id="day-sabado" class="day-panel hidden space-y-4">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+                        <h4 class="font-serif font-bold text-xl text-slate-900">Sábado: Day Pass, Tortugas & Adoquín</h4>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-lg">Tradición & Atardecer</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-4 bg-amber-50 rounded-2xl border border-amber-200 space-y-2">
+                            <span class="bg-amber-200 text-amber-900 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>09:00 AM - 11:00 AM</span>
+                            <span class="font-bold text-sm text-amber-950 block"><i class="fa-solid fa-utensils text-amber-600 mr-2"></i>Desayuno de Chilaquiles en el Depa</span>
+                            <p class="text-xs text-amber-800">Desayuno especial preparado por <strong>Camilo Serratos</strong>.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>11:30 AM - 04:30 PM</span>
+                                <a href="https://maps.google.com/?q=Playa+Coral+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Playa Coral
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-umbrella-beach text-teal-600 mr-2"></i>Day Pass en Playa Coral ($150 MXN)</span>
+                            <p class="text-xs text-slate-600">Acceso a instalaciones, camastros y descanso en la playa.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>05:00 PM - 06:30 PM</span>
+                                <a href="https://maps.google.com/?q=Playa+Bacocho+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Playa Bacocho
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-hand-holding-heart text-coral-500 mr-2"></i>Liberación de Tortugas (Vive Mar)</span>
+                            <p class="text-xs text-slate-600">Experiencia ecológica de liberación de crías al atardecer en Playa Bacocho.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-slate-200 text-slate-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>07:00 PM - 09:00 PM</span>
+                                <a href="https://maps.google.com/?q=El+Adoquin+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> El Adoquín
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-bag-shopping text-teal-600 mr-2"></i>Recuerdos en Mercado El Adoquín</span>
+                            <p class="text-xs text-slate-600">Paseo artesanal para comprar souvenirs, recuerdos y artesanías.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <span class="bg-purple-100 text-purple-900 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>09:30 PM en adelante</span>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-dice text-purple-600 mr-2"></i>Noche de Juegos en el Departamento</span>
+                            <p class="text-xs text-slate-600">Convivencia grupal, música y juegos de mesa en el Airbnb.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOMINGO -->
+                <div id="day-domingo" class="day-panel hidden space-y-4">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+                        <h4 class="font-serif font-bold text-xl text-slate-900">Domingo: Motos Acuáticas & Punta Cometa</h4>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-lg">Aventura & Atardecer</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <span class="bg-slate-200 text-slate-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>09:00 AM - 11:00 AM</span>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-church text-slate-600 mr-2"></i>Misa & Desayuno Fuera</span>
+                            <p class="text-xs text-slate-600">Asistencia a misa y desayuno en restaurante local.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>11:30 AM - 03:00 PM</span>
+                                <a href="https://maps.google.com/?q=Bahia+Principal+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Bahía Principal
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-water-ladder text-teal-600 mr-2"></i>Motos Acuáticas & Comida Frente al Mar</span>
+                            <p class="text-xs text-slate-600">Renta de motos acuáticas en Bahía Principal (o punto alternativo si no hay disponibilidad) y comida marina.</p>
+                        </div>
+
+                        <div class="p-4 bg-amber-50 rounded-2xl border border-amber-200 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-amber-200 text-amber-900 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>04:00 PM</span>
+                                <a href="https://maps.google.com/?q=Punta+Cometa+Mazunte" target="_blank" class="text-xs bg-amber-200 hover:bg-amber-300 text-amber-900 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Punta Cometa
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-amber-950 block"><i class="fa-solid fa-sun text-amber-600 mr-2"></i>Viaje a Punta Cometa (Mazunte)</span>
+                            <p class="text-xs text-amber-800">
+                                Atardecer sobre los acantilados de Mazunte. <strong>Nota:</strong> Sujeto a confirmación según la decisión tomada el jueves.
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-coral-100 text-coral-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>08:00 PM en adelante</span>
+                                <a href="https://maps.google.com/?q=Punta+Vida+Zicatela" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Punta Vida
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-cocktail text-coral-500 mr-2"></i>Cena & Bebidas en Punta Vida</span>
+                            <p class="text-xs text-slate-600">Cena de cierre grupal a la orilla del mar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LUNES -->
+                <div id="day-lunes" class="day-panel hidden space-y-4">
+                    <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+                        <h4 class="font-serif font-bold text-xl text-slate-900">Lunes: Despedida & Regreso</h4>
+                        <span class="text-xs bg-slate-100 text-slate-600 font-semibold px-2.5 py-1 rounded-lg">Cierre</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <span class="bg-slate-200 text-slate-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>09:00 AM - 11:00 AM</span>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-house-user text-teal-600 mr-2"></i>Desayuno & Check-out</span>
+                            <p class="text-xs text-slate-600">Desayuno en el departamento, entrega de llaves a Carelia y check-out.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>11:30 AM - 02:00 PM</span>
+                                <a href="https://maps.google.com/?q=Playa+Carrizalillo+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Playa Carrizalillo
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-umbrella-beach text-teal-600 mr-2"></i>Última Visita a Playa Carrizalillo</span>
+                            <p class="text-xs text-slate-600">Paseo de despedida por la bahía de Carrizalillo antes de la comida.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-coral-100 text-coral-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>02:30 PM - 05:00 PM</span>
+                                <a href="https://maps.google.com/?q=Restaurante+Espadin+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Espadín / Almoraduz
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-utensils text-coral-500 mr-2"></i>Comida de Despedida</span>
+                            <p class="text-xs text-slate-600">Comida final con vista panorámica en Restaurante Espadín o Almoraduz.</p>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                            <div class="flex flex-wrap justify-between items-center gap-2">
+                                <span class="bg-slate-200 text-slate-800 text-[11px] font-extrabold px-2.5 py-1 rounded-lg"><i class="fa-regular fa-clock mr-1"></i>Tarde</span>
+                                <a href="https://maps.google.com/?q=Aeropuerto+Internacional+de+Puerto+Escondido" target="_blank" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-2.5 py-1 rounded-lg transition">
+                                    <i class="fa-solid fa-map-pin mr-1"></i> Aeropuerto (PXM)
+                                </a>
+                            </div>
+                            <span class="font-bold text-sm text-slate-900 block"><i class="fa-solid fa-plane-departure text-slate-700 mr-2"></i>Traslado al Aeropuerto</span>
+                            <p class="text-xs text-slate-600">Traslado final al aeropuerto ($200 MXN por trayecto). Vuelo de regreso a casa.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-8 mt-12 text-center text-xs">
+        <div class="max-w-6xl mx-auto px-4 space-y-2">
+            <p class="text-slate-200 font-serif text-sm font-bold">Puerto Escondido 2026</p>
+            <p>Tamaulipas Brisas de Zicatela, Oaxaca 70934 · Anfitriona: Carelia</p>
+            <p class="text-slate-500 text-[11px] pt-2">¡Buen viaje a todos! 🌊☀️</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Tab Handler for Day-by-Day Itinerary
+        function setDay(day) {
+            // Hide all panels
+            document.querySelectorAll('.day-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+
+            // Show target panel
+            const targetPanel = document.getElementById('day-' + day);
+            if (targetPanel) {
+                targetPanel.classList.remove('hidden');
+            }
+
+            // Reset tab button styling
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('bg-teal-600', 'text-white', 'shadow');
+                btn.classList.add('bg-slate-200', 'text-slate-700');
+            });
+
+            // Active button styling
+            const activeBtn = document.getElementById('btn-' + day);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-slate-200', 'text-slate-700');
+                activeBtn.classList.add('bg-teal-600', 'text-white', 'shadow');
+            }
+        }
+
+        // Calculator Logic
+        function calculateBudget() {
+            const items = document.querySelectorAll('.calc-item');
+            let total = 0;
+            items.forEach(item => {
+                if (item.checked) {
+                    total += parseInt(item.getAttribute('data-amount') || '0', 10);
+                }
+            });
+            document.getElementById('total-budget-display').innerText = '$' + total.toLocaleString('es-MX') + ' MXN';
+        }
+
+        // Interactive Checklist Logic
+        function updateChecklist() {
+            const items = document.querySelectorAll('.checklist-item');
+            const total = items.length;
+            let checked = 0;
+
+            items.forEach(item => {
+                if (item.checked) checked++;
+            });
+
+            const percentage = total > 0 ? (checked / total) * 100 : 0;
+            
+            document.getElementById('checklist-counter').innerText = `${checked} / ${total}`;
+            document.getElementById('checklist-bar').style.width = `${percentage}%`;
+        }
+
+        function resetChecklist() {
+            document.querySelectorAll('.checklist-item').forEach(item => {
+                item.checked = false;
+            });
+            updateChecklist();
+        }
+
+        // Run on load
+        window.onload = function() {
+            calculateBudget();
+            updateChecklist();
+        };
+    </script>
+</body>
+</html>
